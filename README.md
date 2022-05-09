@@ -15,7 +15,7 @@ Easy way to keep track of/organize team info
 https://github.com/Serendipbrity/Team-Profile-Generator-10-
 
 ## Video Walk through
-
+https://drive.google.com/file/d/113OuXkvpoM2zjM9Y6IJKkNeSgRDnbOVV/view
 
 ## Sample
 Screen Shot Under README.md file
