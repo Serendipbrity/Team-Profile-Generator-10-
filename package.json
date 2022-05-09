@@ -1,8 +1,28 @@
 {
+  "name": "team-profile-generator-10-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serendipbrity/Team-Profile-Generator-10-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Serendipbrity/Team-Profile-Generator-10-/issues"
+  },
+  "homepage": "https://github.com/Serendipbrity/Team-Profile-Generator-10-#readme",
   "devDependencies": {
     "jest": "^28.1.0"
   },
-  "scripts": {
-    "test": "jest"
+  "dependencies": {
+    "inquirer": "^8.2.4"
   }
 }
