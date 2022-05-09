@@ -17,4 +17,7 @@ https://github.com/Serendipbrity/Team-Profile-Generator-10-
 ## Video Walk through
 https://drive.google.com/file/d/14e4AIFg6uPjOu8E6BkbcXGIukKry1AOU/view
 
+## Sample
+Screen Shot Under README.md file
+
 
