@@ -1,13 +1,13 @@
 {
   "name": "team-profile-generator-10-",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Description Generate a Team Profile from command line which includes manager, Engineer, and intern.",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "jes"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
