@@ -27,7 +27,7 @@ const writeFile = (data) => {
 // Creates a function that calls other employee functions to create the team object
 const init = () => {
     return inquirer.prompt([
-        {
+        {//capture Manager Name
             type: `input`,
             name: `name`,
             message: `What is the team manager's name?(Required)`,
@@ -40,7 +40,7 @@ const init = () => {
                 }
             }
         },
-        {
+        {// Capture Manager ID
             type: `input`,
             name: `id`,
             message: `What is the team manager's id?(Required)`,
@@ -53,7 +53,7 @@ const init = () => {
                 }
             }
         },
-        {
+        {//Capture Manager Email
             type: `input`,
             name: `email`,
             message: `What is the team manager's email?(Required)`,
@@ -66,7 +66,7 @@ const init = () => {
                 }
             }
         },
-        {
+        {//Capture Manager Office Number
             type: `input`,
             name: `office`,
             message: `What is the team manager's office number?(Required)`,
@@ -79,13 +79,13 @@ const init = () => {
                 }
             }
         },
-        {
+        {//Add another employee?
             type: `list`,
             name: `extraEmployee`,
             message: `Would you like to add another employee?`,
             choices: ['Add Engineer', 'Add Intern', 'Finish building my team']
         }
-    ])
+    ])// fulfill Promise 
     .then(data => {
         const { name, id, email, office, extraEmployee } = data;
         const manager = new Manager(name, id, email, office);
@@ -99,7 +99,7 @@ const init = () => {
 const addEmployee = (data) => {
     if(data === 'Add Engineer') {
         return inquirer.prompt([
-            {
+            { // Engineer Name
                 type: `input`,
                 name: `name`,
                 message: `What is the engineer's name?(Required)`,
@@ -112,7 +112,7 @@ const addEmployee = (data) => {
                     }
                 }
             },
-            {
+            {// Engineer ID
                 type: `input`,
                 name: `id`,
                 message: `What is the engineer's id?(Required)`,
@@ -125,7 +125,7 @@ const addEmployee = (data) => {
                     }
                 }
             },
-            {
+            {// Engineer Email
                 type: `input`,
                 name: `email`,
                 message: `What is the engineer's email?(Required)`,
@@ -138,7 +138,7 @@ const addEmployee = (data) => {
                     }
                 }
             },
-            {
+            {// Engineers Github
                 type: `input`,
                 name: `github`,
                 message: `What is the engineer's GitHub username?(Required)`,
@@ -151,13 +151,13 @@ const addEmployee = (data) => {
                     }
                 }
             },
-            {
+            {// Add another employee?
                 type: `list`,
                 name: `extraEmployee`,
                 message: `Would you like to add another employee?`,
                 choices: ['Add Engineer', 'Add Intern', 'Finish building my team']
             }
-        ])
+        ]) // fulfill promise
         .then(data => {
             const { name, id, email, github, extraEmployee } = data;
             const engineer = new Engineer(name, id, email, github);
@@ -168,7 +168,7 @@ const addEmployee = (data) => {
         })
     } else if (data === 'Add Intern') {
         return inquirer.prompt([
-            {
+            {// capture Interns Name
                 type: `input`,
                 name: `name`,
                 message: `What is the intern's name?(Required)`,
@@ -181,7 +181,7 @@ const addEmployee = (data) => {
                     }
                 }
             },
-            {
+            {//capture interns ID
                 type: `input`,
                 name: `id`,
                 message: `What is the intern's id?(Required)`,
@@ -194,7 +194,7 @@ const addEmployee = (data) => {
                     }
                 }
             },
-            {
+            {// Capture interns Email
                 type: `input`,
                 name: `email`,
                 message: `What is the intern's email?(Required)`,
@@ -207,7 +207,7 @@ const addEmployee = (data) => {
                     }
                 }
             },
-            {
+            { //Capture Interns School
                 type: `input`,
                 name: `school`,
                 message: `What is the intern's school name?(Required)`,
@@ -220,13 +220,13 @@ const addEmployee = (data) => {
                     }
                 }
             },
-            {
+            {// Add another employee?
                 type: `list`,
                 name: `extraEmployee`,
                 message: `Would you like to add another employee?`,
                 choices: ['Add Engineer', 'Add Intern', 'Finish building my team']
             }
-        ])
+        ])// fulfill promise
         .then(data => {
             const { name, id, email, school, extraEmployee } = data;
             const intern = new Intern(name, id, email, school);
@@ -235,7 +235,7 @@ const addEmployee = (data) => {
 
             addEmployee(extraEmployee);
         })
-    } else {
+    } else { // generate page
         const html = generatePage(employees);
         return writeFile(html);
     }
